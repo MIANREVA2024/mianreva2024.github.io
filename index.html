@@ -22,101 +22,78 @@
             --glass: rgba(255, 255, 255, 0.9); 
         }
 
-        body { 
-            background-color: #f0f2f5; 
-            font-family: 'Inter', sans-serif; 
-            color: #2d3436; 
-        }
+        body { background-color: #f0f2f5; font-family: 'Inter', sans-serif; color: #2d3436; }
 
         .hero { 
             background: linear-gradient(rgba(35, 47, 62, 0.8), rgba(35, 47, 62, 0.9)), 
                         url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80');
-            background-size: cover; 
-            background-position: center; 
-            padding: 100px 0 120px; 
-            color: white; 
-            border-bottom: 6px solid var(--aws-orange);
+            background-size: cover; background-position: center; padding: 80px 0 100px; color: white; border-bottom: 6px solid var(--aws-orange);
         }
 
-        .profile-container { margin-top: -90px; position: relative; z-index: 10; }
+        .profile-container { margin-top: -70px; position: relative; z-index: 10; }
         
         .profile-img { 
-            width: 180px; height: 180px; 
-            border: 6px solid white; 
-            border-radius: 50%; /* Foto circular */
-            object-fit: cover; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
-            background-color: white; 
+            width: 180px; height: 180px; border: 6px solid white; border-radius: 50%; 
+            object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.2); background-color: white; 
         }
 
         .card-custom { 
-            border: none; 
-            border-radius: 20px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
-            background: var(--glass); 
-            backdrop-filter: blur(10px); 
-            transition: transform 0.3s ease; 
+            border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            background: var(--glass); backdrop-filter: blur(10px); margin-bottom: 1.5rem;
         }
-        
-        .card-custom:hover { transform: translateY(-5px); }
 
         .section-title { 
-            border-left: 5px solid var(--aws-orange); 
-            padding-left: 15px; 
-            margin-bottom: 25px; 
-            font-weight: 800; 
-            color: var(--aws-navy); 
+            border-left: 5px solid var(--aws-orange); padding-left: 15px; 
+            margin-bottom: 25px; font-weight: 800; color: var(--aws-navy); 
         }
         
         .skill-tag { 
-            background: #fff; 
-            border: 1px solid #e1e8ed; 
-            padding: 8px 18px; 
-            border-radius: 50px; 
-            display: inline-block; 
-            margin: 5px; 
-            font-size: 0.95rem; 
-            font-weight: 600; 
-            color: var(--aws-navy); 
-            transition: all 0.3s ease;
+            background: #fff; border: 1px solid #e1e8ed; padding: 6px 14px; 
+            border-radius: 50px; display: inline-block; margin: 4px; 
+            font-size: 0.85rem; font-weight: 600; color: var(--aws-navy); 
         }
 
-        .skill-tag:hover {
-            border-color: var(--aws-orange);
-            background-color: #fffaf0;
-            transform: scale(1.05);
-        }
-
-        .btn-linkedin { background-color: #0077b5; color: white; border-radius: 10px; padding: 12px 30px; font-weight: 600; text-decoration: none; display: inline-block; }
-        .btn-contact { background-color: var(--aws-orange); color: var(--aws-navy); border-radius: 10px; padding: 12px 30px; font-weight: 700; text-decoration: none; display: inline-block; }
+        .btn-linkedin { background-color: #0077b5; color: white; border-radius: 10px; width: 100%; padding: 10px; display: block; text-align: center; text-decoration: none; font-weight: 600; }
+        .btn-contact { background-color: var(--aws-orange); color: var(--aws-navy); border-radius: 10px; width: 100%; padding: 10px; display: block; text-align: center; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body>
 
     <header class="hero text-center">
         <div class="container">
-            <h1 class="display-3 fw-800 mb-2">Miguel Angel Reyes Vasquez</h1>
-            <p class="lead fs-3 fw-light">Ingeniero de Sistemas | MBA | Cloud Tech</p>
+            <h1 class="display-4 fw-800 mb-0">Miguel Angel Reyes Vasquez</h1>
+            <p class="lead fs-4 fw-light">Ingeniero de Sistemas | MBA | Cloud Tech</p>
         </div>
     </header>
 
     <div class="container profile-container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                
-                <!-- Info Principal con Foto y Botones -->
-                <div class="card-custom p-4 mb-4 text-center">
+        <div class="row">
+            <!-- COLUMNA LATERAL (SIDEBAR) -->
+            <div class="col-lg-4">
+                <div class="card-custom p-4 text-center">
                     <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/v1777560420/logo_linkedin_oylbze.png" class="profile-img mb-3" alt="Miguel Angel Reyes">
-                    <h2 class="fw-bold mb-1">Miguel Angel Reyes Vasquez</h2>
-                    <p class="text-muted fs-5 mb-4"><i class="bi bi-geo-alt-fill text-danger"></i> Alicante, España</p>
-                    <div class="d-flex justify-content-center gap-3">
+                    <h3 class="fw-bold">Miguel Angel Reyes</h3>
+                    <p class="text-muted"><i class="bi bi-geo-alt-fill text-danger"></i> Alicante, España</p>
+                    <hr>
+                    <div class="d-grid gap-2">
                         <a href="#" class="btn-linkedin"><i class="bi bi-linkedin me-2"></i> LinkedIn</a>
                         <a href="mailto:tu-correo@ejemplo.com" class="btn-contact"><i class="bi bi-envelope-fill me-2"></i> Contactar</a>
                     </div>
                 </div>
 
-                <!-- Perfil Profesional Justificado -->
-                <div class="card-custom p-4 mb-4">
+                <div class="card-custom p-4">
+                    <h5 class="fw-bold mb-3">Idiomas</h5>
+                    <p class="mb-1">Español (Nativo)</p>
+                    <div class="progress mb-3" style="height: 8px;"><div class="progress-bar bg-warning" style="width: 100%"></div></div>
+                    <p class="mb-1">Inglés (Técnico)</p>
+                    <div class="progress mb-3" style="height: 8px;"><div class="progress-bar bg-warning" style="width: 50%"></div></div>
+                </div>
+            </div>
+
+            <!-- COLUMNA PRINCIPAL -->
+            <div class="col-lg-8">
+                <!-- Perfil Justificado -->
+                <div class="card-custom p-4">
                     <h2 class="section-title">Perfil Ejecutivo & Técnico</h2>
                     <div style="text-align: justify;">
                         <p class="fs-5 lh-base mb-3">
@@ -128,79 +105,60 @@
                     </div>
                 </div>
 
-                <!-- Formación Académica con Logos 85px -->
-                <div class="card-custom p-4 mb-4">
+                <!-- Formación -->
+                <div class="card-custom p-4">
                     <h2 class="section-title">Formación Académica</h2>
                     
-                    <div class="ms-2">
-                        <!-- AWS -->
-                        <div class="d-flex align-items-center mb-4">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" 
-                                     alt="AWS re/Start Graduate" style="width: 100%; height: auto;">
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">AWS re/Start Graduate</h5>
-                                <p class="text-muted mb-0">Amazon Web Services | Factoría F5</p>
-                            </div>
+                    <!-- AWS -->
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                            <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" style="width: 100%; height: auto;">
                         </div>
-
-                        <!-- MBA -->
-                        <div class="d-flex align-items-center mb-4">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" 
-                                     alt="MBA" style="width: 100%; height: auto;">
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Master en Administración de Negocios</h5>
-                                <p class="text-muted mb-0">Dirección estratégica y gestión de operaciones IT.</p>
-                            </div>
+                        <div>
+                            <h5 class="fw-bold mb-0">AWS re/Start Graduate</h5>
+                            <p class="text-muted mb-0">Amazon Web Services | Factoría F5</p>
                         </div>
+                    </div>
 
-                        <!-- CIP -->
-                        <div class="d-flex align-items-center mb-4">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777842821/logo_cip_itzolz.png" 
-                                     alt="CIP" style="width: 100%; height: auto;">
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Ingeniería de Sistemas</h5>
-                                <p class="text-muted mb-0">Colegiado CIP | Especialista en Infraestructuras Críticas.</p>
-                            </div>
+                    <!-- MBA -->
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                            <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" style="width: 100%; height: auto;">
                         </div>
+                        <div>
+                            <h5 class="fw-bold mb-0">Master en Administración de Negocios</h5>
+                            <p class="text-muted mb-0">MBA - Dirección Estratégica IT</p>
+                        </div>
+                    </div>
 
-                        <!-- Técnico -->
-                        <div class="d-flex align-items-center">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <i class="bi bi-cpu-fill text-primary" style="font-size: 3.5rem;"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Técnico en Computación e Informática</h5>
-                                <p class="text-muted mb-0">Base técnica y soporte operativo de sistemas.</p>
-                            </div>
+                    <!-- CIP -->
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                            <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777842821/logo_cip_itzolz.png" style="width: 100%; height: auto;">
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0">Ingeniería de Sistemas</h5>
+                            <p class="text-muted mb-0">Colegiado CIP</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Especialidades & Skills -->
-                <div class="card-custom p-4 mb-5">
+                <!-- Skills Agrupadas -->
+                <div class="card-custom p-4">
                     <h2 class="section-title">Especialidades & Skills</h2>
-                    <div class="mb-4">
-                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase;">Gestión & Negocios</h5>
+                    <div class="mb-3">
+                        <h6 class="fw-bold text-muted text-uppercase small">Gestión & Negocios</h6>
                         <div class="skill-tag">Dirección Estratégica</div>
-                        <div class="skill-tag">Gestión de Operaciones IT</div>
-                        <div class="skill-tag">Liderazgo de Equipos</div>
-                        <div class="skill-tag">Eficiencia Operativa</div>
+                        <div class="skill-tag">Gestión IT</div>
+                        <div class="skill-tag">Liderazgo</div>
                     </div>
-                    <div class="mb-4">
-                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase;">Cloud & Sistemas</h5>
-                        <div class="skill-tag">AWS Cloud Foundations</div>
-                        <div class="skill-tag">Administración de Sistemas</div>
+                    <div class="mb-3">
+                        <h6 class="fw-bold text-muted text-uppercase small">Cloud & Sistemas</h6>
+                        <div class="skill-tag">AWS Cloud foundations</div>
                         <div class="skill-tag">Infraestructura Crítica</div>
-                        <div class="skill-tag">Entornos On-Premise</div>
+                        <div class="skill-tag">On-Premise</div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
