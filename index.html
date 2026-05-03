@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon (Aparece en la pestaña del navegador) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dcojnhrj7/image/upload/c_fill,g_center,h_32,w_32/v1777814489/aws-re-start-graduate_vgjv3x.png">
     <link rel="apple-touch-icon" href="https://res.cloudinary.com/dcojnhrj7/image/upload/c_fill,g_center,h_180,w_180/v1777814489/aws-re-start-graduate_vgjv3x.png">
     
@@ -29,8 +29,8 @@
         }
 
         .hero { 
-            background: linear-gradient(rgba(35, 47, 62, 0.7), rgba(35, 47, 62, 0.8)), 
-                        url('https://res.cloudinary.com/dcojnhrj7/image/upload/v1777560420/logo_linkedin_oylbze.png');
+            background: linear-gradient(rgba(35, 47, 62, 0.8), rgba(35, 47, 62, 0.9)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80');
             background-size: cover; 
             background-position: center; 
             padding: 100px 0 120px; 
@@ -43,6 +43,7 @@
         .profile-img { 
             width: 180px; height: 180px; 
             border: 6px solid white; 
+            border-radius: 50%; /* Foto circular */
             object-fit: cover; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
             background-color: white; 
@@ -67,7 +68,6 @@
             color: var(--aws-navy); 
         }
         
-        /* Skills Tags con efecto Hover */
         .skill-tag { 
             background: #fff; 
             border: 1px solid #e1e8ed; 
@@ -78,7 +78,6 @@
             font-size: 0.95rem; 
             font-weight: 600; 
             color: var(--aws-navy); 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
             transition: all 0.3s ease;
         }
 
@@ -88,14 +87,8 @@
             transform: scale(1.05);
         }
 
-        .btn-linkedin { 
-            background-color: #0077b5; 
-            color: white; 
-            border-radius: 10px; 
-            padding: 12px 30px; 
-            font-weight: 600; 
-            text-decoration: none; 
-        }
+        .btn-linkedin { background-color: #0077b5; color: white; border-radius: 10px; padding: 12px 30px; font-weight: 600; text-decoration: none; display: inline-block; }
+        .btn-contact { background-color: var(--aws-orange); color: var(--aws-navy); border-radius: 10px; padding: 12px 30px; font-weight: 700; text-decoration: none; display: inline-block; }
     </style>
 </head>
 <body>
@@ -111,6 +104,17 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 
+                <!-- Info Principal con Foto y Botones -->
+                <div class="card-custom p-4 mb-4 text-center">
+                    <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/v1777560420/logo_linkedin_oylbze.png" class="profile-img mb-3" alt="Miguel Angel Reyes">
+                    <h2 class="fw-bold mb-1">Miguel Angel Reyes Vasquez</h2>
+                    <p class="text-muted fs-5 mb-4"><i class="bi bi-geo-alt-fill text-danger"></i> Alicante, España</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="btn-linkedin"><i class="bi bi-linkedin me-2"></i> LinkedIn</a>
+                        <a href="mailto:tu-correo@ejemplo.com" class="btn-contact"><i class="bi bi-envelope-fill me-2"></i> Contactar</a>
+                    </div>
+                </div>
+
                 <!-- Perfil Profesional Justificado -->
                 <div class="card-custom p-4 mb-4">
                     <h2 class="section-title">Perfil Ejecutivo & Técnico</h2>
@@ -119,7 +123,7 @@
                             Profesional con más de 15 años de trayectoria liderando operaciones tecnológicas y gestión de infraestructuras críticas. Tras una sólida carrera en entornos On-Premise, he evolucionado mi perfil hacia el ecosistema Cloud, graduándome en el programa <strong>AWS re/Start</strong>.
                         </p>
                         <p class="fs-5 lh-base text-muted mb-0">
-                            Mi valor diferencial es la capacidad de unir la visión estratégica de negocio con la implementación de soluciones escalables en la nube, garantizando eficiencia operativa y resiliencia en procesos de transformación digital desde Alicante.
+                            Mi valor diferencial es la capacidad de unir la visión estratégica de negocio con la implementación de soluciones escalables en la nube, garantizando eficiencia operativa y resiliencia en procesos de transformación digital.
                         </p>
                     </div>
                 </div>
@@ -133,8 +137,7 @@
                         <div class="d-flex align-items-center mb-4">
                             <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
                                 <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" 
-                                     alt="Insignia oficial AWS re/Start Graduate - Miguel Angel Reyes Vasquez" 
-                                     style="width: 100%; height: auto;">
+                                     alt="AWS re/Start Graduate" style="width: 100%; height: auto;">
                             </div>
                             <div>
                                 <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">AWS re/Start Graduate</h5>
@@ -146,8 +149,7 @@
                         <div class="d-flex align-items-center mb-4">
                             <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
                                 <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" 
-                                     alt="Master en Administración de Negocios - Miguel Angel Reyes Vasquez" 
-                                     style="width: 100%; height: auto;">
+                                     alt="MBA" style="width: 100%; height: auto;">
                             </div>
                             <div>
                                 <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Master en Administración de Negocios</h5>
@@ -159,8 +161,7 @@
                         <div class="d-flex align-items-center mb-4">
                             <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
                                 <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777842821/logo_cip_itzolz.png" 
-                                     alt="Ingeniero de Sistemas Colegiado CIP - Miguel Angel Reyes Vasquez" 
-                                     style="width: 100%; height: auto;">
+                                     alt="CIP" style="width: 100%; height: auto;">
                             </div>
                             <div>
                                 <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Ingeniería de Sistemas</h5>
@@ -181,38 +182,22 @@
                     </div>
                 </div>
 
-                <!-- Especialidades & Skills Agrupadas -->
+                <!-- Especialidades & Skills -->
                 <div class="card-custom p-4 mb-5">
                     <h2 class="section-title">Especialidades & Skills</h2>
-                    
                     <div class="mb-4">
-                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                            <i class="bi bi-briefcase-fill me-2"></i>Gestión & Negocios
-                        </h5>
+                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase;">Gestión & Negocios</h5>
                         <div class="skill-tag">Dirección Estratégica</div>
                         <div class="skill-tag">Gestión de Operaciones IT</div>
                         <div class="skill-tag">Liderazgo de Equipos</div>
                         <div class="skill-tag">Eficiencia Operativa</div>
                     </div>
-
                     <div class="mb-4">
-                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                            <i class="bi bi-cloud-check-fill me-2"></i>Cloud & Sistemas
-                        </h5>
+                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase;">Cloud & Sistemas</h5>
                         <div class="skill-tag">AWS Cloud Foundations</div>
                         <div class="skill-tag">Administración de Sistemas</div>
                         <div class="skill-tag">Infraestructura Crítica</div>
                         <div class="skill-tag">Entornos On-Premise</div>
-                        <div class="skill-tag">Seguridad IT</div>
-                    </div>
-
-                    <div>
-                        <h5 class="fw-bold mb-3 text-muted" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                            <i class="bi bi-people-fill me-2"></i>Competencias
-                        </h5>
-                        <div class="skill-tag">Resolución de Problemas</div>
-                        <div class="skill-tag">Comunicación Efectiva</div>
-                        <div class="skill-tag">Adaptabilidad</div>
                     </div>
                 </div>
 
