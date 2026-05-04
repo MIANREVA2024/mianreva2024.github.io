@@ -22,7 +22,6 @@
             --glass: rgba(255, 255, 255, 0.9); 
         }
 
-        /* Configuración para que el menú no tape los títulos y baje suavemente */
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 85px;
@@ -34,9 +33,15 @@
             color: #2d3436; 
         }
 
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Estilo para alinear botones al fondo de las tarjetas */
+        .card-flex-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between; /* Empuja el botón al final */
         }
+
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 
         .hero { 
             background: linear-gradient(rgba(35, 47, 62, 0.7), rgba(35, 47, 62, 0.8)), 
@@ -89,70 +94,56 @@
             font-weight: 600; 
             color: var(--aws-navy); 
             transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        .skill-tag:hover {
-            border-color: var(--aws-orange);
-            background-color: #fffaf0;
-            transform: translateY(-2px);
         }
 
         .btn-linkedin { background-color: #0077b5; color: white; }
         .btn-github { background-color: #24292e; color: white; }
         .btn-cv { background-color: #dc3545; color: white; }
         
-        .btn-custom-group .btn {
-            border-radius: 10px;
-            padding: 12px 25px;
-            font-weight: 600;
+        .btn-contacto-nav {
+            background-color: #ff9900 !important;
+            color: #232f3e !important;
+            font-weight: 800 !important;
+            border-radius: 8px;
+            padding: 8px 20px !important;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-contacto-nav:hover {
+            background-color: #e68a00 !important;
+            color: white !important;
+        }
+
+        .btn-scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--aws-orange);
+            color: var(--aws-navy);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border: 2px solid white;
         }
-        .btn-contacto-nav {
-        background-color: #ff9900 !important;
-        color: #232f3e !important;
-        font-weight: 800 !important;
-        border-radius: 8px;
-        padding: 8px 20px !important;
-        margin-left: 15px;
-        transition: all 0.3s ease;
-    }
-    .btn-contacto-nav:hover {
-        background-color: #e68a00 !important;
-        color: white !important;
-    }
-        /* Estilo del botón flotante */
-.btn-scroll-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--aws-orange);
-    color: var(--aws-navy);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    text-decoration: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    border: 2px solid white;
-}
 
-.btn-scroll-top:hover {
-    background-color: var(--aws-navy);
-    color: white;
-    transform: translateY(-5px);
-}
+        .btn-scroll-top:hover {
+            background-color: var(--aws-navy);
+            color: white;
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
 
-    <!-- CÓDIGO CORREGIDO PARA EL MENÚ NAVEGACION-->
+<!-- NAVEGACION -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--aws-navy); border-bottom: 3px solid var(--aws-orange);">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">MARV <span class="text-warning">.IT</span></a>
@@ -172,185 +163,116 @@
     </div>
 </nav>
 
-    <!-- HEADER -->
-    <header class="hero text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold text-uppercase">Miguel Angel Reyes</h1>
-            <p class="lead fs-2 fw-light" style="letter-spacing: 2px;">Ingeniero de Sistemas CIP | MBA | AWS re/Start Graduate</p>
-        </div>
-    </header>
-
-    <!-- FOTO Y BOTONES -->
-    <div class="container text-center profile-container mb-5">
-        <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777560945/foto_miguel_hkfyxy.jpg" alt="Miguel Angel Reyes" class="profile-img">
-        <div class="mt-4 d-flex flex-wrap justify-content-center gap-3 btn-custom-group">
-            <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-linkedin shadow text-white"><i class="bi bi-linkedin me-2"></i> LinkedIn</a>
-            
-            <!-- ENLACE GITHUB -->
-            <a href="https://github.com/MIANREVA2024" target="_blank" class="btn btn-github shadow text-white"><i class="bi bi-github me-2"></i> GitHub</a>
-            
-            <!-- BOTÓN RESUMEN / CV -->
-            <a href="tu-archivo-cv.pdf" download class="btn btn-cv shadow text-white"><i class="bi bi-file-earmark-pdf-fill me-2"></i> Resumen</a>
-            
-            <a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-dark shadow px-4 py-3 d-flex align-items-center"><i class="bi bi-envelope-at me-2"></i> Contactar</a>
-
-            </div>
+<!-- HEADER -->
+<header class="hero text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold text-uppercase">Miguel Angel Reyes</h1>
+        <p class="lead fs-2 fw-light" style="letter-spacing: 2px;">Ingeniero de Sistemas CIP | MBA | AWS re/Start Graduate</p>
     </div>
+</header>
 
-    <main class="container mb-5">
-        <div class="row g-4">
-            <!-- COLUMNA IZQUIERDA -->
-            <div class="col-lg-8">
-                
-                <!-- PERFIL PROFESIONAL -->
-                <div id="perfil" class="card-custom p-4 mb-4">
-                    <h2 class="section-title">Perfil Ejecutivo & Técnico</h2>
-                    <div style="text-align: justify;">
-                        <p class="fs-5 lh-base mb-3">
-                            Profesional con más de 15 años de trayectoria liderando operaciones tecnológicas y gestión de infraestructuras críticas. Tras una sólida carrera en entornos On-Premise, he evolucionado mi perfil hacia el ecosistema Cloud, graduándome en el programa <strong>AWS re/Start</strong>.
-                        </p>
-                        <p class="fs-5 lh-base text-muted mb-0">
-                            Mi valor diferencial es la capacidad de unir la visión estratégica de negocio con la implementación de soluciones escalables en la nube, garantizando eficiencia operativa y resiliencia en procesos de transformación digital desde Alicante.
-                        </p>
-                    </div>
-                </div>
+<!-- FOTO Y BOTONES -->
+<div class="container text-center profile-container mb-5">
+    <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777560945/foto_miguel_hkfyxy.jpg" alt="Miguel Angel Reyes" class="profile-img">
+    <div class="mt-4 d-flex flex-wrap justify-content-center gap-3">
+        <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-linkedin shadow px-4 py-3 d-flex align-items-center"><i class="bi bi-linkedin me-2"></i> LinkedIn</a>
+        <a href="https://github.com/MIANREVA2024" target="_blank" class="btn btn-github shadow px-4 py-3 d-flex align-items-center"><i class="bi bi-github me-2"></i> GitHub</a>
+        <a href="tu-archivo-cv.pdf" download class="btn btn-cv shadow px-4 py-3 d-flex align-items-center"><i class="bi bi-file-earmark-pdf-fill me-2"></i> Resumen</a>
+        <a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-dark shadow px-4 py-3 d-flex align-items-center"><i class="bi bi-envelope-at me-2"></i> Contactar</a>
+    </div>
+</div>
 
-                <!-- FORMACIÓN -->
-                <div id="formacion" class="card-custom p-4 mb-4">
-                    <h2 class="section-title">Formación Académica</h2>
-                    <div class="ms-2">
-                        <div class="d-flex align-items-center mb-4">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" alt="Insignia AWS" style="width: 100%;">
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">AWS re/Start Graduate</h5>
-                                <p class="text-muted mb-0">Amazon Web Services | Factoría F5</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-4">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" alt="MBA" style="width: 100%;">
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">Máster en Administración de Negocios (MBA)</h5>
-                                <p class="text-muted mb-0">Dirección estratégica y gestión de operaciones IT.</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-4">
-                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777842821/logo_cip_itzolz.png" alt="Ingeniero CIP" style="width: 100%;">
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">Ingeniería de Sistemas</h5>
-                                <p class="text-muted mb-0">Colegiado CIP | Especialista en Infraestructuras Críticas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ESPECIALIDADES -->
-                <div id="especialidades" class="card-custom p-4">
-                    <h2 class="section-title">Especialidades & Skills</h2>
-                    
-                    <div id="skills">
-                        <div class="mb-4">
-                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-briefcase-fill me-2"></i>Gestión & Negocios</h6>
-                            <div class="skill-tag">Dirección Estratégica</div>
-                            <div class="skill-tag">Gestión de Operaciones IT</div>
-                            <div class="skill-tag">Liderazgo de Equipos</div>
-                            <div class="skill-tag">Eficiencia Operativa</div>
-                        </div>
-
-                        <div class="mb-4">
-                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-cloud-check-fill me-2"></i>Cloud & Infraestructura</h6>
-                            <div class="skill-tag">AWS Cloud Foundations</div>
-                            <div class="skill-tag">Administración Linux</div>
-                            <div class="skill-tag">Infraestructura Crítica</div>
-                            <div class="skill-tag">Ciberseguridad</div>
-                        </div>
-
-                        <div>
-                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-people-fill me-2"></i>Soft Skills</h6>
-                            <div class="skill-tag">Resolución de Problemas</div>
-                            <div class="skill-tag">Comunicación Efectiva</div>
-                            <div class="skill-tag">Adaptabilidad</div>
-                        </div>
-                    </div>
+<main class="container mb-5">
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div id="perfil" class="card-custom p-4 mb-4">
+                <h2 class="section-title">Perfil Ejecutivo & Técnico</h2>
+                <div style="text-align: justify;">
+                    <p class="fs-5 lh-base mb-3">Profesional con más de 15 años de trayectoria liderando operaciones tecnológicas...</p>
+                    <p class="fs-5 lh-base text-muted mb-0">Mi valor diferencial es la capacidad de unir la visión estratégica de negocio...</p>
                 </div>
             </div>
 
-            <!-- COLUMNA DERECHA -->
-            <div class="col-lg-4">
-                <div class="card-custom p-4 mb-4 text-center">
-                    <h4 class="fw-bold mb-3">Estado Actual</h4>
-                    <p class="text-primary fw-bold fs-5"><i class="bi bi-geo-alt-fill text-danger"></i> Alicante, España</p>
-                    <span class="badge bg-success-subtle text-success p-2 px-3 border border-success w-100 mb-3">Disponible para Proyectos</span>
-                    <hr>
-                    <div class="text-start">
-                        <p class="small mb-1 fw-bold">Idiomas:</p>
-                        <p class="small text-muted mb-0">Español (Nativo) | Inglés (Técnico)</p>
+            <div id="formacion" class="card-custom p-4 mb-4">
+                <h2 class="section-title">Formación Académica</h2>
+                <div class="ms-2">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" style="width: 85px; margin-right: 1.5rem;">
+                        <div>
+                            <h5 class="fw-bold mb-0">AWS re/Start Graduate</h5>
+                            <p class="text-muted mb-0">Amazon Web Services | Factoría F5</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card-custom p-4 text-center">
-                    <h4 class="fw-bold mb-3">Certificaciones</h4>
-                    <div class="d-flex flex-column gap-3 align-items-center">
-                        <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto,w_120/v1777814489/aws-re-start-graduate_vgjv3x.png" alt="AWS Cert" style="width: 100px;">
-                        <p class="small text-muted">Acreditación oficial por AWS Training and Certification</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" style="width: 85px; margin-right: 1.5rem;">
+                        <div>
+                            <h5 class="fw-bold mb-0">MBA</h5>
+                            <p class="text-muted mb-0">Dirección estratégica IT.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
 
-  <!-- SECCIÓN DE CONTACTO FINAL -->
+        <div class="col-lg-4">
+            <div id="especialidades" class="card-custom p-4 text-center">
+                <h4 class="fw-bold mb-3">Estado Actual</h4>
+                <p class="text-primary fw-bold fs-5"><i class="bi bi-geo-alt-fill text-danger"></i> Alicante, España</p>
+                <hr>
+                <div class="text-start">
+                    <p class="small mb-1 fw-bold">Idiomas:</p>
+                    <p class="small text-muted mb-0">Español (Nativo) | Inglés (Técnico)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
 <section id="contacto" class="py-5 bg-white">
     <div class="container">
         <h2 class="section-title text-center mb-5">¿Hablamos de tu próximo proyecto?</h2>
-        <div class="row g-4 justify-content-center">
-            <!-- LinkedIn Card -->
+        <div class="row g-4 d-flex align-items-stretch">
+            <!-- LinkedIn -->
             <div class="col-md-4">
-                <div class="card-custom p-4 text-center h-100 border">
-                    <i class="bi bi-linkedin fs-1 text-primary mb-3"></i>
-                    <h5>Red Profesional</h5>
-                    <p class="small text-muted">Conecta conmigo para networking y colaboraciones.</p>
+                <div class="card-custom p-4 text-center border card-flex-container">
+                    <div>
+                        <i class="bi bi-linkedin fs-1 text-primary mb-3"></i>
+                        <h5>Red Profesional</h5>
+                        <p class="small text-muted">Conecta conmigo para networking.</p>
+                    </div>
                     <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-outline-primary w-100">Ver Perfil</a>
                 </div>
             </div>
-            <!-- Email Card -->
+            <!-- Email -->
             <div class="col-md-4">
-                <div class="card-custom p-4 text-center h-100 border">
-                    <i class="bi bi-envelope-check fs-1 text-success mb-3"></i>
-                    <h5>Correo Directo</h5>
-                    <p class="small text-muted">Escríbeme para propuestas laborales o consultoría.</p>
-                   <a href="mailto:miguel.reyes.vasquez@gmail.com?subject=Contacto%20desde%20tu%20Web&body=Hola%20Miguel,%20vi%20tu%20perfil%20y%20me%20gustaría..." class="btn btn-outline-success w-100">Enviar Email</a>
-                <!--<a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-outline-success w-100">Enviar Email</a>-->
+                <div class="card-custom p-4 text-center border card-flex-container">
+                    <div>
+                        <i class="bi bi-envelope-check fs-1 text-success mb-3"></i>
+                        <h5>Correo Directo</h5>
+                        <p class="small text-muted mb-1">Escríbeme para propuestas laborales.</p>
+                        <p class="small fw-bold text-dark">miguel.reyes.vasquez@gmail.com</p>
+                    </div>
+                    <a href="mailto:miguel.reyes.vasquez@gmail.com?subject=Contacto%20desde%20tu%20Web" class="btn btn-outline-success w-100">Enviar Email</a>
                 </div>
             </div>
-            <!-- GitHub Card -->
+            <!-- GitHub -->
             <div class="col-md-4">
-                <div class="card-custom p-4 text-center h-100 border">
-                    <i class="bi bi-github fs-1 text-dark mb-3"></i>
-                    <h5>Repositorios</h5>
-                    <p class="small text-muted">Revisa mis laboratorios y proyectos técnicos en la nube.</p>
+                <div class="card-custom p-4 text-center border card-flex-container">
+                    <div>
+                        <i class="bi bi-github fs-1 text-dark mb-3"></i>
+                        <h5>Repositorios</h5>
+                        <p class="small text-muted">Revisa mis laboratorios y proyectos técnicos en la nube.</p>
+                    </div>
                     <a href="https://github.com/MIANREVA2024?tab=repositories" target="_blank" class="btn btn-outline-dark w-100">Explorar Código</a>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5">
-            <p class="text-muted fw-bold mb-0">© 2026 Miguel Angel Reyes Vasquez</p>
-            <p class="small text-muted">Ingeniero de Sistemas | Alicante, España</p>
-        </div>
     </div>
 </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- BOTÓN SUBIR AL INICIO -->
-<a href="#" class="btn-scroll-top shadow" id="btnScrollTop">
-    <i class="bi bi-arrow-up-short"></i>
-</a>
+
+<!-- BOTÓN SUBIR -->
+<a href="#" class="btn-scroll-top shadow"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
