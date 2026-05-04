@@ -50,15 +50,20 @@
 
         .profile-container { margin-top: -90px; position: relative; z-index: 10; }
         
-        .profile-img { 
-            width: 250px; height: 250px; 
-            border: 6px solid white; 
-            object-fit: cover; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
-            background-color: white; 
-            border-radius: 50% !important;
-        }
-
+       .profile-img { 
+    width: 250px; 
+    height: 250px; 
+    border: 6px solid white; 
+    object-fit: cover; 
+    /* Esta línea ayuda a que los navegadores mantengan los bordes nítidos */
+    image-rendering: -webkit-optimize-contrast; 
+    /* Centra tu rostro exactamente en el círculo */
+    object-position: center 20%; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    background-color: white; 
+    border-radius: 50% !important;
+}
+        
         .card-custom { 
             border: none; 
             border-radius: 20px; 
