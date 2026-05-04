@@ -123,6 +123,31 @@
         background-color: #e68a00 !important;
         color: white !important;
     }
+        /* Estilo del botón flotante */
+.btn-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--aws-orange);
+    color: var(--aws-navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.btn-scroll-top:hover {
+    background-color: var(--aws-navy);
+    color: white;
+    transform: translateY(-5px);
+}
     </style>
 </head>
 <body>
@@ -280,11 +305,54 @@
         </div>
     </main>
 
+  <!-- SECCIÓN DE CONTACTO FINAL -->
+<section id="contacto" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">¿Hablamos de tu próximo proyecto?</h2>
+        <div class="row g-4 justify-content-center">
+            <!-- LinkedIn Card -->
+            <div class="col-md-4">
+                <div class="card-custom p-4 text-center h-100 border">
+                    <i class="bi bi-linkedin fs-1 text-primary mb-3"></i>
+                    <h5>Red Profesional</h5>
+                    <p class="small text-muted">Conecta conmigo para networking y colaboraciones.</p>
+                    <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-outline-primary w-100">Ver Perfil</a>
+                </div>
+            </div>
+            <!-- Email Card -->
+            <div class="col-md-4">
+                <div class="card-custom p-4 text-center h-100 border">
+                    <i class="bi bi-envelope-check fs-1 text-success mb-3"></i>
+                    <h5>Correo Directo</h5>
+                    <p class="small text-muted">Escríbeme para propuestas laborales o consultoría.</p>
+                    <a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-outline-success w-100">Enviar Email</a>
+                </div>
+            </div>
+            <!-- GitHub Card -->
+            <div class="col-md-4">
+                <div class="card-custom p-4 text-center h-100 border">
+                    <i class="bi bi-github fs-1 text-dark mb-3"></i>
+                    <h5>Repositorios</h5>
+                    <p class="small text-muted">Revisa mis laboratorios y proyectos técnicos en la nube.</p>
+                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-outline-dark w-100">Explorar Código</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <p class="text-muted fw-bold mb-0">© 2026 Miguel Angel Reyes Vasquez</p>
+            <p class="small text-muted">Ingeniero de Sistemas | Alicante, España</p>
+        </div>
+    </div>
+</section>
     <footer id="contacto" class="text-center py-5 bg-white border-top">
         <p class="text-muted mb-1 fw-bold">© 2026 Miguel Angel Reyes Vasquez</p>
         <p class="small text-muted">Ingeniero de Sistemas | Alicante</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- BOTÓN SUBIR AL INICIO -->
+<a href="#" class="btn-scroll-top shadow" id="btnScrollTop">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
 </body>
 </html>
