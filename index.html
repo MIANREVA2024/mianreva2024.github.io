@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dcojnhrj7/image/upload/c_fill,g_center,h_32,w_32/v1777814489/aws-re-start-graduate_vgjv3x.png">
     <link rel="apple-touch-icon" href="https://res.cloudinary.com/dcojnhrj7/image/upload/c_fill,g_center,h_180,w_180/v1777814489/aws-re-start-graduate_vgjv3x.png">
     
     <title>Miguel Angel Reyes | Ingeniero CIP & MBA</title>
 
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -22,10 +20,10 @@
             --glass: rgba(255, 255, 255, 0.9); 
         }
 
-        /* Configuración para que el menú no tape los títulos y baje suavemente */
+        /* 1. AJUSTE DE SCROLL: Más espacio para que no tape el título */
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 85px;
+            scroll-padding-top: 100px;
         }
 
         body { 
@@ -34,8 +32,10 @@
             color: #2d3436; 
         }
 
+        /* 2. Z-INDEX: Asegura que el menú esté siempre al frente */
         .navbar {
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1050 !important;
         }
 
         .hero { 
@@ -50,19 +50,17 @@
 
         .profile-container { margin-top: -90px; position: relative; z-index: 10; }
         
-       .profile-img { 
-    width: 250px; 
-    height: 250px; 
-    border: 6px solid white; 
-    object-fit: cover; 
-    /* Esta línea ayuda a que los navegadores mantengan los bordes nítidos */
-    image-rendering: -webkit-optimize-contrast; 
-    /* Centra tu rostro exactamente en el círculo */
-    object-position: center 20%; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
-    background-color: white; 
-    border-radius: 50% !important;
-}
+        .profile-img { 
+            width: 250px; 
+            height: 250px; 
+            border: 6px solid white; 
+            object-fit: cover; 
+            image-rendering: -webkit-optimize-contrast; 
+            object-position: center 20%; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+            background-color: white; 
+            border-radius: 50% !important;
+        }
         
         .card-custom { 
             border: none; 
@@ -116,48 +114,47 @@
             justify-content: center;
         }
         .btn-contacto-nav {
-        background-color: #ff9900 !important;
-        color: #232f3e !important;
-        font-weight: 800 !important;
-        border-radius: 8px;
-        padding: 8px 20px !important;
-        margin-left: 15px;
-        transition: all 0.3s ease;
-    }
-    .btn-contacto-nav:hover {
-        background-color: #e68a00 !important;
-        color: white !important;
-    }
-        /* Estilo del botón flotante */
-.btn-scroll-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--aws-orange);
-    color: var(--aws-navy);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    text-decoration: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    border: 2px solid white;
-}
+            background-color: #ff9900 !important;
+            color: #232f3e !important;
+            font-weight: 800 !important;
+            border-radius: 8px;
+            padding: 8px 20px !important;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        .btn-contacto-nav:hover {
+            background-color: #e68a00 !important;
+            color: white !important;
+        }
+        
+        .btn-scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--aws-orange);
+            color: var(--aws-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
 
-.btn-scroll-top:hover {
-    background-color: var(--aws-navy);
-    color: white;
-    transform: translateY(-5px);
-}
+        .btn-scroll-top:hover {
+            background-color: var(--aws-navy);
+            color: white;
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
 
-    <!-- CÓDIGO CORREGIDO PARA EL MENÚ NAVEGACION-->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--aws-navy); border-bottom: 3px solid var(--aws-orange);">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -178,7 +175,6 @@
     </div>
 </nav>
 
-    <!-- HEADER -->
     <header class="hero text-center">
         <div class="container">
             <h1 class="display-3 fw-bold text-uppercase">Miguel Angel Reyes Vásquez</h1>
@@ -186,37 +182,22 @@
         </div>
     </header>
 
-    <!-- FOTO Y BOTONES -->
     <div class="container text-center profile-container mb-5">
-        <!-- He cambiado q_auto por q_100 para máxima calidad y añadido un tamaño de captura mayor -->
-<img src="https://res.cloudinary.com/dcojnhrj7/image/upload/w_600,h_600,c_fill,g_face,q_100,f_auto/v1777560945/foto_miguel_hkfyxy.jpg" alt="Miguel Angel Reyes" class="profile-img">
+        <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/w_600,h_600,c_fill,g_face,q_100,f_auto/v1777560945/foto_miguel_hkfyxy.jpg" alt="Miguel Angel Reyes" class="profile-img">
 
         <div class="mt-4 d-flex flex-wrap justify-content-center gap-3 btn-custom-group">
             <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-linkedin shadow text-white"><i class="bi bi-linkedin me-2"></i> LinkedIn</a>
-            
-            <!-- ENLACE GITHUB -->
             <a href="https://github.com/MIANREVA2024" target="_blank" class="btn btn-github shadow text-white"><i class="bi bi-github me-2"></i> GitHub</a>
-            
-            
-            <!-- BOTÓN RESUMEN / CV -->
-           <a href="https://res.cloudinary.com/dcojnhrj7/image/upload/fl_attachment/v1778147994/Curriculum_Vitae_Miguel7.5.26_gdganm.pdf" 
-   download="CV_Miguel_Angel_Reyes_Backend_Cloud.pdf" 
-   class="btn btn-cv shadow text-white">
-    <i class="bi bi-file-earmark-pdf-fill me-2"></i> Resumen
-</a>
-          <!--  <a href="tu-archivo-cv.pdf" download class="btn btn-cv shadow text-white"><i class="bi bi-file-earmark-pdf-fill me-2"></i> Resumen</a> -->
-            
+            <a href="https://res.cloudinary.com/dcojnhrj7/image/upload/fl_attachment/v1778147994/Curriculum_Vitae_Miguel7.5.26_gdganm.pdf" download="CV_Miguel_Angel_Reyes_Backend_Cloud.pdf" class="btn btn-cv shadow text-white">
+                <i class="bi bi-file-earmark-pdf-fill me-2"></i> Resumen
+            </a>
             <a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-dark shadow px-4 py-3 d-flex align-items-center"><i class="bi bi-envelope-at me-2"></i> Contactar</a>
-
-            </div>
+        </div>
     </div>
 
     <main class="container mb-5">
         <div class="row g-4">
-            <!-- COLUMNA IZQUIERDA -->
             <div class="col-lg-8">
-                
-                <!-- PERFIL PROFESIONAL -->
                 <div id="perfil" class="card-custom p-4 mb-4">
                     <h2 class="section-title">Perfil Ejecutivo & Técnico</h2>
                     <div style="text-align: justify;">
@@ -229,115 +210,104 @@
                     </div>
                 </div>
 
-                <!-- FORMACIÓN -->
                 <div id="formacion" class="card-custom p-4 mb-4">
-    <h2 class="section-title">Formación Académica</h2>
-    <div class="ms-2">
-        
-        <div class="d-flex align-items-center mb-4">
-            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" 
-                     alt="Insignia AWS" style="width: 100%;">
-            </div>
-            <div>
-                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">AWS re/Start Graduate</h5>
-                <p class="text-muted mb-0">Amazon Web Services | Factoría F5</p>
-                <small class="text-secondary">Desarrollo Web Backend y cloud AWS re/Start (850 horas)</small>
-            </div>
-        </div>
+                    <h2 class="section-title">Formación Académica</h2>
+                    <div class="ms-2">
+                        <div class="d-flex align-items-center mb-4">
+                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777814489/aws-re-start-graduate_vgjv3x.png" alt="Insignia AWS" style="width: 100%;">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">AWS re/Start Graduate</h5>
+                                <p class="text-muted mb-0">Amazon Web Services | Factoría F5</p>
+                                <small class="text-secondary">Desarrollo Web Backend y cloud AWS re/Start (850 horas)</small>
+                            </div>
+                        </div>
 
-        <div class="d-flex align-items-center mb-4">
-            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" 
-                     alt="MBA" style="width: 100%;">
-            </div>
-            <div>
-                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">Máster en Administración de Negocios (MBA)</h5>
-                <p class="text-muted mb-0">Dirección estratégica y gestión de operaciones IT</p>
-            </div>
-        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777843710/mba_t7zolk.png" alt="MBA" style="width: 100%;">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">Máster en Administración de Negocios (MBA)</h5>
+                                <p class="text-muted mb-0">Dirección estratégica y gestión de operaciones IT</p>
+                            </div>
+                        </div>
 
-        <div class="d-flex align-items-center mb-4">
-            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777842821/logo_cip_itzolz.png" 
-                     alt="Ingeniero CIP" style="width: 100%;">
-            </div>
-            <div>
-                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">Ingeniería de Sistemas</h5>
-                <p class="text-muted mb-0">Colegiado CIP | Especialista en Infraestructuras Críticas</p>
-            </div>
-        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                                <img src="https://res.cloudinary.com/dcojnhrj7/image/upload/q_auto,f_auto/v1777842821/logo_cip_itzolz.png" alt="Ingeniero CIP" style="width: 100%;">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0" style="font-size: 1.3rem;">Ingeniería de Sistemas</h5>
+                                <p class="text-muted mb-0">Colegiado CIP | Especialista en Infraestructuras Críticas</p>
+                            </div>
+                        </div>
 
-        <div class="d-flex align-items-center">
-            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
-                <i class="bi bi-cpu-fill text-primary" style="font-size: 3.5rem;" title="Técnico en Computación e Informática - Miguel Angel Reyes"></i>
-            </div>
-            <div>
-                <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Técnico en Computación e Informática</h5>
-                <p class="text-muted mb-0">Base técnica y soporte operativo de sistemas</p>
-            </div>
-        </div>
+                        <div class="d-flex align-items-center">
+                            <div style="width: 85px; margin-right: 1.5rem;" class="text-center">
+                                <i class="bi bi-cpu-fill text-primary" style="font-size: 3.5rem;" title="Técnico en Computación e Informática"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0" style="font-size: 1.4rem;">Técnico en Computación e Informática</h5>
+                                <p class="text-muted mb-0">Base técnica y soporte operativo de sistemas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    </div>
-</div>
+                <div id="conocimientos" class="card-custom p-4 mb-4">
+                    <h2 class="section-title">Conocimientos</h2>
+                    <div id="skills-tecnicos">
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-patch-check-fill me-2"></i>Ultima Formación :</h6>
+                            <div class="skill-tag">Desarrollo Web Backend & Cloud AWS re/Start (850h)</div>
+                        </div>
 
-<!-- CONOCIMIENTOS -->
-<div id="conocimientos" class="card-custom p-4 mb-4">
-    <h2 class="section-title">Conocimientos</h2>
-    
-    <div id="skills-tecnicos">
-        <div class="mb-4">
-            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-patch-check-fill me-2"></i>Ultima Formación :</h6>
-            <div class="skill-tag">Desarrollo Web Backend & Cloud AWS re/Start (850h)</div>
-        </div>
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-cloud-fill me-2"></i>Cloud & DevOps:</h6>
+                            <div class="skill-tag">AWS (EC2, S3, RDS, IAM, Lambda)</div>
+                            <div class="skill-tag">Docker & Docker Compose</div>
+                            <div class="skill-tag">Git / GitHub</div>
+                        </div>
 
-        <div class="mb-4">
-            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-cloud-fill me-2"></i>Cloud & DevOps:</h6>
-            <div class="skill-tag">AWS (EC2, S3, RDS, IAM, Lambda)</div>
-            <div class="skill-tag">Docker & Docker Compose</div>
-            <div class="skill-tag">Git / GitHub</div>
-        </div>
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-code-slash me-2"></i>Desarrollo & Base de Datos:</h6>
+                            <div class="skill-tag">Java (Spring Boot)</div>
+                            <div class="skill-tag">PHP</div>
+                            <div class="skill-tag">JUnit</div>
+                            <div class="skill-tag">MySQL & PostgreSQL</div>
+                        </div>
 
-        <div class="mb-4">
-            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-code-slash me-2"></i>Desarrollo & Base de Datos:</h6>
-            <div class="skill-tag">Java (Spring Boot)</div>
-            <div class="skill-tag">PHP</div>
-            <div class="skill-tag">JUnit</div>
-            <div class="skill-tag">MySQL & PostgreSQL</div>
-        </div>
+                        <div class="mb-0">
+                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-gears me-2"></i>Gestión e Infraestructura:</h6>
+                            <div class="skill-tag">Administración de Servidores</div>
+                            <div class="skill-tag">Seguridad de la Información</div>
+                            <div class="skill-tag">IT Strategy (MBA vision)</div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="mb-0">
-            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-gears me-2"></i>Gestión e Infraestructura:</h6>
-            <div class="skill-tag">Administración de Servidores</div>
-            <div class="skill-tag">Seguridad de la Información</div>
-            <div class="skill-tag">IT Strategy (MBA vision)</div>
-        </div>
-    </div>
-</div>
-                <!-- SOFT SKILLS -->
-
-<div id="soft-skills" class="card-custom p-4">
-    <h2 class="section-title">Soft Skills</h2>
-    <div id="skills-blandas">
-        <div class="mb-0">
-            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-people-fill me-2"></i>Habilidades Personales</h6>
-            <div class="d-flex flex-wrap gap-2 justify-content-start">
-                <div class="skill-tag">Liderazgo de equipos de trabajo</div>
-                <div class="skill-tag">Trabajar en equipo y bajo presión</div>
-                <div class="skill-tag">Persona proactiva</div>
-                <div class="skill-tag">Orientado a la obtención de resultados</div>
-                <div class="skill-tag">Buen manejo de conflictos</div>
-                <div class="skill-tag">Persona resolutiva</div>
-                <div class="skill-tag">Gran adaptabilidad a los cambios</div>
-                <div class="skill-tag">Aprendizaje rápido</div>
-            </div>
-        </div>
-    </div>
-</div>
-
+                <div id="soft-skills" class="card-custom p-4">
+                    <h2 class="section-title">Soft Skills</h2>
+                    <div id="skills-blandas">
+                        <div class="mb-0">
+                            <h6 class="fw-bold text-muted text-uppercase small mb-3"><i class="bi bi-people-fill me-2"></i>Habilidades Personales</h6>
+                            <div class="d-flex flex-wrap gap-2 justify-content-start">
+                                <div class="skill-tag">Liderazgo de equipos de trabajo</div>
+                                <div class="skill-tag">Trabajar en equipo y bajo presión</div>
+                                <div class="skill-tag">Persona proactiva</div>
+                                <div class="skill-tag">Orientado a la obtención de resultados</div>
+                                <div class="skill-tag">Buen manejo de conflictos</div>
+                                <div class="skill-tag">Persona resolutiva</div>
+                                <div class="skill-tag">Gran adaptabilidad a los cambios</div>
+                                <div class="skill-tag">Aprendizaje rápido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- COLUMNA DERECHA -->
             <div class="col-lg-4">
                 <div class="card-custom p-4 mb-4 text-center">
                     <h4 class="fw-bold mb-3">Estado Actual</h4>
@@ -361,52 +331,55 @@
         </div>
     </main>
 
-  <!-- SECCIÓN DE CONTACTO FINAL -->
-<section id="contacto" class="py-5 bg-white">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">¿Hablamos de tu próximo proyecto?</h2>
-        <div class="row g-4 justify-content-center">
-            <!-- LinkedIn Card -->
-            <div class="col-md-4">
-                <div class="card-custom p-4 text-center h-100 border">
-                    <i class="bi bi-linkedin fs-1 text-primary mb-3"></i>
-                    <h5>Red Profesional</h5>
-                    <p class="small text-muted">Conecta conmigo para networking y colaboraciones.</p>
-                    <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-outline-primary w-100">Ver Perfil</a>
+    <section id="contacto" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">¿Hablamos de tu próximo proyecto?</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card-custom p-4 text-center h-100 border">
+                        <i class="bi bi-linkedin fs-1 text-primary mb-3"></i>
+                        <h5>Red Profesional</h5>
+                        <a href="https://www.linkedin.com/in/miguelreyesvasquez/" target="_blank" class="btn btn-outline-primary w-100">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom p-4 text-center h-100 border">
+                        <i class="bi bi-envelope-check fs-1 text-success mb-3"></i>
+                        <h5>Correo Directo</h5>
+                        <a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-outline-success w-100">Enviar Email</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom p-4 text-center h-100 border">
+                        <i class="bi bi-github fs-1 text-dark mb-3"></i>
+                        <h5>Repositorios</h5>
+                        <a href="https://github.com/MIANREVA2024?tab=repositories" target="_blank" class="btn btn-outline-dark w-100">Explorar Código</a>
+                    </div>
                 </div>
             </div>
-            <!-- Email Card -->
-            <div class="col-md-4">
-                <div class="card-custom p-4 text-center h-100 border">
-                    <i class="bi bi-envelope-check fs-1 text-success mb-3"></i>
-                    <h5>Correo Directo</h5>
-                    <p class="small text-muted">Escríbeme para propuestas laborales o consultoría.</p>
-                   <a href="mailto:miguel.reyes.vasquez@gmail.com?subject=Contacto%20desde%20tu%20Web&body=Hola%20Miguel,%20vi%20tu%20perfil%20y%20me%20gustaría..." class="btn btn-outline-success w-100">Enviar Email</a>
-                <!--<a href="mailto:miguel.reyes.vasquez@gmail.com" class="btn btn-outline-success w-100">Enviar Email</a>-->
-                </div>
-            </div>
-            <!-- GitHub Card -->
-            <div class="col-md-4">
-                <div class="card-custom p-4 text-center h-100 border">
-                    <i class="bi bi-github fs-1 text-dark mb-3"></i>
-                    <h5>Repositorios</h5>
-                    <p class="small text-muted">Revisa mis laboratorios y proyectos técnicos en la nube.</p>
-                    <a href="https://github.com/MIANREVA2024?tab=repositories" target="_blank" class="btn btn-outline-dark w-100">Explorar Código</a>
-                </div>
+            <div class="text-center mt-5">
+                <p class="text-muted fw-bold mb-0">© 2026 Miguel Angel Reyes Vasquez</p>
+                <p class="small text-muted">Ingeniero de Sistemas | Alicante, España</p>
             </div>
         </div>
-        <div class="text-center mt-5">
-            <p class="text-muted fw-bold mb-0">© 2026 Miguel Angel Reyes Vasquez</p>
-            <p class="small text-muted">Ingeniero de Sistemas | Alicante, España</p>
-        </div>
-    </div>
-</section>
-    
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- BOTÓN SUBIR AL INICIO -->
-<a href="#" class="btn-scroll-top shadow" id="btnScrollTop">
-    <i class="bi bi-arrow-up-short"></i>
-</a>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (window.innerWidth < 992) { // Si es pantalla móvil
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+    </script>
+
+    <a href="#" class="btn-scroll-top shadow" id="btnScrollTop">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
 </body>
 </html>
-
